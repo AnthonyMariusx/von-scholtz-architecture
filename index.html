@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Von Scholtz Architecture - Design Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>  
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img src="pictures/IMG_0108.PNG" alt="Scholtz" class="logo-img"></div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">Studio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>VON SCHOLTZ ARCHITECTURE</h1>
+            <p>Thoughtfully designed spaces that inspire and endure</p>
+            <button class="cta-button">View Work</button>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('pictures/BeveryHills.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="project-info">
+                        <h3>Knokke-Heist, Belgium</h3>
+                        <p class="year">2025</p>
+                        <p class="details">Residential • 4,200 sqft • Modern</p>
+                        <p class="description">Clean lines and open spaces define this contemporary home. Floor-to-ceiling windows frame the landscape while maintaining privacy through thoughtful material selection.</p>
+                        <button class="learn-more">View Project</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('pictures/BeveryHills2.jpg.webp'); background-size: cover; background-position: center;"></div>
+                    <div class="project-info">
+                        <h3>Square du Bois, Belgium</h3>
+                        <p class="year">2024</p>
+                        <p class="details">Commercial • 5,100 sqft • Sustainable</p>
+                        <p class="description">Seamlessly integrated with its environment, this structure celebrates the relationship between built form and natural landscape through bio-responsive design principles.</p>
+                        <button class="learn-more">View Project</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('pictures/BeveryHills3.jpg.webp'); background-size: cover; background-position: center;"></div>
+                    <div class="project-info">
+                        <h3>Wallonia, Belgium</h3>
+                        <p class="year">2023</p>
+                        <p class="details">Restoration • 6,800 sqft • Mixed-use</p>
+                        <p class="description">Respectful restoration honoring historical significance while introducing contemporary spatial concepts and sustainable systems for modern living.</p>
+                        <button class="learn-more">View Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Our Approach</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="icon">■</div>
+                    <h3>Conceptual Design</h3>
+                    <p>We develop design concepts rooted in program analysis and contextual understanding to create spaces of lasting value.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">◆</div>
+                    <h3>Collaborative Process</h3>
+                    <p>Engaging stakeholders throughout the design journey ensures our solutions reflect diverse perspectives and needs.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">○</div>
+                    <h3>Sustainable Practice</h3>
+                    <p>We integrate environmental responsibility into every project, creating spaces that are beautiful and ecologically conscious.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">△</div>
+                    <h3>Technical Excellence</h3>
+                    <p>Rigorous detailing and coordination ensure our designs are buildable, durable, and exceed technical standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Start a Conversation</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p>+32 472 123 456</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>studio@vonscholtz.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Studio</h4>
+                        <p>Zilverbeekstraat 23, Wallonia</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Von Scholtz Architecture. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
